@@ -1,0 +1,54 @@
+
+	select count(*) from movies;
+
+
+	create view abc as select distinct * from movies;
+	select count(*) from abc;
+
+
+	select * from movies order by year desc;
+
+
+	select name,year,rate from movies order by rate desc limit 5;
+
+
+	select name,year,rate from movies order by rate asc limit 3;
+
+
+	select year,count(*) as co from movies group by year order by co desc; 
+
+
+	select rate,count(*) as rat from movies group by rate order by rat desc;
+
+
+	select * from movies where year=2008 and rate>3;
+
+
+	select count(*) from movies where year=2008 and rate>3;
+
+
+	 select name,year,rate,duration from movies  order by duration desc limit 1;
+
+
+	select name,year,rate,duration from movies  order by rate asc limit 1;
+
+
+	 select * from movies where rate>4 and year>2005;
+
+	
+	select * from movies where rate>4 and year>2005 order by rate desc limit 1;
+
+	
+	select * from movies where rate>4 and year>2005 order by rate asc limit 1;
+
+
+
+	select year,count(*) from movies where year=2008 group by year;
+
+
+	select * from movies where year>1975 and year<2000;
+
+	select count(*) from movies where year>1975 and year<2000;
+
+
+	select count(*) from movies where year>1975 and year<2000 and rate>3.5;
